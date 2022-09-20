@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,900,900i&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  scroll-behavior: smooth;
+  --select-border: #777;
+  --select-focus: blue;
+  --gray: #f9f9ff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--gray);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  font-weight: 700;
+  margin: 20px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+select {
+  appearance: none;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+
+  border: none;
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+
+  cursor: pointer;
+
+  background-color: var(--gray);
+
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  position: relative;
+}
+
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 2px solid var(--select-focus);
+  border-radius: inherit;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  width: 50%;
+}
+
+#result {
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: auto;
+  height: fit-content;
+  padding: 4px 12px;
+  outline: 0;
+  color: #fff;
+  background-color: #fc5296;
+  background-image: linear-gradient(315deg, #ef2f7c 0%, #f56454 74%);
+}
+
+.section-card {
+  background: rgb(73, 171, 228);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 35px;
+  border-radius: 20px;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 1rem;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  height: 103%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}

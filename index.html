@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Kode Pos Indonesia</title>
+  </head>
+  <body>
+    <section class="background">
+      <img src="img/background.jpg" />
+    </section>
+    <main>
+      <h1>Cari kode pos!</h1>
+      <section class="section-card">
+        <label for="provinsi">Provinsi  </label>
+        <select
+          name="provinsi"
+          id="provinsi"
+          onchange="displayKabupaten()"
+        ></select>
+
+        <label for="kabupaten">Kabupaten</label>
+        <select
+          name="kabupaten"
+          id="kabupaten"
+          onchange="displayKecamatan()"
+        ></select>
+
+        <label for="kecamatan">Kecamatan</label>
+        <select
+          name="kecamatan"
+          id="kecamatan"
+          onchange="displayKelurahan()"
+        ></select>
+
+        <label for="kelurahan">Kelurahan</label>
+        <select
+          name="kelurahan"
+          id="kelurahan"
+          onchange="displayResult()"
+        ></select>
+      </section>
+
+      <section class="result">
+        <h3>Kode Pos :</h3>
+        <div id="result"></div>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
